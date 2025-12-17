@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Responsive Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="assets/logo.png" alt="Logo" class="logo-img">
+                <h2><i>Cyan Nexus</i></h2>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="notification-icon" id="notificationIcon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="notification-badge" id="notificationBadge">3</span>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to Our Modern Website</h1>
+                <p class="hero-subtitle">Creating beautiful, responsive web experiences</p>
+                <div class="hero-buttons">
+                    <a href="login.html" class="btn btn-primary">Get Started</a>
+                    <a href="#services" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Data Section -->
+    <section class="user-data-section" id="userDataSection" style="display: none;">
+        <div class="container">
+            <div class="user-data-card">
+                <h2>Your Profile</h2>
+                <div class="user-info">
+                    <div class="user-info-item">
+                        <strong>Name:</strong>
+                        <span id="userName"></span>
+                    </div>
+                    <div class="user-info-item">
+                        <strong>Email:</strong>
+                        <span id="userEmail"></span>
+                    </div>
+                    <div class="user-info-item">
+                        <strong>Account Created:</strong>
+                        <span id="userCreated"></span>
+                    </div>
+                    <button class="btn btn-primary" id="logoutBtn" style="margin-top: 1rem;">Logout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="about" class="features">
+        <div class="container">
+            <h2 class="section-title">What We Offer</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Beautiful Design</h3>
+                    <p>Modern, clean, and intuitive user interfaces that engage your audience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Fully Responsive</h3>
+                    <p>Perfect display on all devices - mobile, tablet, and desktop.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Performance</h3>
+                    <p>Optimized for speed and efficiency to deliver the best user experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure & Reliable</h3>
+                    <p>Built with security best practices to keep your data safe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" id="webDevCard">
+                    <h3>Web Development</h3>
+                    <p>Custom web applications tailored to your business needs.</p>
+                    <ul>
+                        <li>Front-end Development</li>
+                        <li>Back-end Integration</li>
+                        <li>API Development</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>UI/UX Design</h3>
+                    <p>User-centered design that drives engagement and conversions.</p>
+                    <ul>
+                        <li>Wireframing</li>
+                        <li>Prototyping</li>
+                        <li>User Testing</li>
+                    </ul>
+                </div>
+                <div class="service-card" id="consultingCard">
+                    <h3>Consulting</h3>
+                    <p>Expert advice to help you make the right technology decisions.</p>
+                    <ul>
+                        <li>Strategy Planning</li>
+                        <li>Technical Reviews</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Talk</h3>
+                    <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <span>shaedcholayil13@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Phone:</strong>
+                            <span>9744523063</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Address:</strong>
+                            <span>123 Main Street, City, State 12345</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Modern Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Consulting Modal -->
+    <div class="modal-overlay" id="consultingModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <h2>Consulting Services</h2>
+            <div class="modal-text">
+                <p>A paragraph is a distinct section of writing, composed of one or more sentences, that develops a single main idea or topic, helping to organize text and guide readers through an author's thoughts, usually marked by an indent or line break. A strong paragraph often starts with a topic sentence, followed by supporting sentences that elaborate with details, examples, or reasons, and sometimes concludes with a concluding sentence, forming a coherent unit of</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Web Development Modal -->
+    <div class="modal-overlay" id="webDevModal">
+        <div class="modal-content">
+            <span class="modal-close" id="webDevModalClose">&times;</span>
+            <h2>Web Development Services</h2>
+            <div class="modal-text">
+                <p>marked by an indent or line break. A strong paragraph often starts with a topic sentence, followed by supporting sentences that elaborate with details, examples, or reasons, and sometimes concludes with a concluding sentence, forming a coherent unit of discourse</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
