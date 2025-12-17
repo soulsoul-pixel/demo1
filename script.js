@@ -261,6 +261,10 @@ document.addEventListener('keydown', (e) => {
             webDevModal.classList.remove('active');
             document.body.style.overflow = '';
         }
+        if (typeof uiUxModal !== 'undefined' && uiUxModal && uiUxModal.classList.contains('active')) {
+            uiUxModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
     }
 });
 
@@ -283,6 +287,30 @@ if (webDevCard && webDevModal && webDevModalClose) {
     webDevModal.addEventListener('click', (e) => {
         if (e.target === webDevModal) {
             webDevModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+// UI/UX Design Service Card Click Handler
+const uiUxCard = document.getElementById('uiUxCard');
+const uiUxModal = document.getElementById('uiUxModal');
+const uiUxModalClose = document.getElementById('uiUxModalClose');
+
+if (uiUxCard && uiUxModal && uiUxModalClose) {
+    uiUxCard.addEventListener('click', () => {
+        uiUxModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    uiUxModalClose.addEventListener('click', () => {
+        uiUxModal.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    uiUxModal.addEventListener('click', (e) => {
+        if (e.target === uiUxModal) {
+            uiUxModal.classList.remove('active');
             document.body.style.overflow = '';
         }
     });
@@ -390,8 +418,6 @@ if (loginForm) {
         window.location.href = 'index.html';
     });
 }
-
-
 
 
 
